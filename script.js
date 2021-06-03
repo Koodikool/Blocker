@@ -13,10 +13,15 @@ var myName = "Krister"
 setInterval(function () {
     ctx.clearRect(0, 0, canvas.width, canvas.height)
 
+    var alreadyDrawnPlayers = []
     for (const item of serverData) {
         ctx.fillStyle = "rgb(135, 30, 30)";
         if (item.type === 'player') {
             ctx.fillStyle = "blue";
+            if (alreadyDrawnPlayers.includes(item.name)) {
+                continue
+            }
+            alreadyDrawnPlayers.push(item.name)
         }
         ctx.fillRect(item.x, item.y, 20, 20);
     }
