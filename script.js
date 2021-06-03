@@ -10,8 +10,15 @@ var blocks = []
 
 setInterval(function () {
     ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+    ctx.fillStyle = "brown";
+    for (const block of blocks) {
+        ctx.fillRect(block.locationX, block.locationY, 20, 20);
+    }
+
     ctx.fillStyle = "rgb(50, 210, 0)";
     ctx.fillRect(playerX, playerY, 20, 20);
+
 }, 1000 / 25)
 
 document.onkeydown = function(event) {
