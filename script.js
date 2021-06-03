@@ -18,4 +18,13 @@ document.onkeydown = function(event) {
     if (key === 'ArrowDown') {
         playerY += 1
     }
+    if (key === 'ArrowUp') {
+        playerY -= 1
+    }
+    if (key === 'ArrowRight') {
+        playerX += 1
+    }
+    if (key === 'ArrowLeft') {
+        playerX -= 1
+    }
 }
