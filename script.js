@@ -6,6 +6,8 @@ canvas.height = 500
 var playerX = 0
 var playerY = 0
 var playerSpeed = 3
+var blocks = []
+
 setInterval(function () {
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     ctx.fillStyle = "rgb(50, 210, 0)";
@@ -25,5 +27,9 @@ document.onkeydown = function(event) {
     }
     if (key === 'ArrowLeft') {
         playerX -= playerSpeed
+    }
+    if (key === ' ') {
+        var newBlock = {locationX: playerX, locationY: playerY}
+        blocks.push(newBlock)
     }
 }
