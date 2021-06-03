@@ -13,9 +13,7 @@ setInterval(function () {
 }, 1000 / 25)
 
 document.onkeydown = function(event) {
-    console.log('event', event)
     var key = event.key
-    console.log(key)
     if (key === 'ArrowDown') {
         playerY += playerSpeed
     }
