@@ -12,6 +12,11 @@ var serverData = []
 setInterval(function () {
     ctx.clearRect(0, 0, canvas.width, canvas.height)
 
+    for (const item of serverData) {
+        ctx.fillStyle = "rgb(135, 30, 30)";
+        ctx.fillRect(item.x, item.y, 20, 20);
+    }
+
     ctx.fillStyle = "brown";
     for (const block of blocks) {
         ctx.fillRect(block.locationX, block.locationY, 20, 20);
