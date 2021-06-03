@@ -14,6 +14,9 @@ setInterval(function () {
 
     for (const item of serverData) {
         ctx.fillStyle = "rgb(135, 30, 30)";
+        if (item.type === 'player') {
+            ctx.fillStyle = "blue";
+        }
         ctx.fillRect(item.x, item.y, 20, 20);
     }
 
