@@ -58,5 +58,6 @@ document.onkeydown = function(event) {
 
 setInterval(async function(){
     serverData = await fetchGET('https://app.koodikool.ee/sdb/blockers')
+    serverData.reverse()
     fetchPOST('https://app.koodikool.ee/sdb/blockers', {type: 'player', x: playerX, y: playerY, name: myName})
 }, 2000)
