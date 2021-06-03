@@ -15,4 +15,6 @@ setInterval(function () {
 
 document.onkeydown = function(event) {
     console.log('event', event)
+    var key = event.key
+    console.log(key)
 }
