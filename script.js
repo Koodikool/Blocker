@@ -5,6 +5,7 @@ canvas.height = 500
 
 var playerX = 0
 var playerY = 0
+var playerSpeed = 3
 setInterval(function () {
     ctx.clearRect(0, 0, canvas.width, canvas.height)
     ctx.fillStyle = "rgb(50, 210, 0)";
@@ -16,15 +17,15 @@ document.onkeydown = function(event) {
     var key = event.key
     console.log(key)
     if (key === 'ArrowDown') {
-        playerY += 1
+        playerY += playerSpeed
     }
     if (key === 'ArrowUp') {
-        playerY -= 1
+        playerY -= playerSpeed
     }
     if (key === 'ArrowRight') {
-        playerX += 1
+        playerX += playerSpeed
     }
     if (key === 'ArrowLeft') {
-        playerX -= 1
+        playerX -= playerSpeed
     }
 }
