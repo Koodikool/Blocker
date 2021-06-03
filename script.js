@@ -53,6 +53,7 @@ document.onkeydown = function(event) {
     if (key === ' ') {
         var newBlock = {locationX: playerX, locationY: playerY}
         blocks.push(newBlock)
+        fetchPOST('https://app.koodikool.ee/sdb/blockers', { type: 'block', x: playerX, y: playerY })
     }
 }
 
