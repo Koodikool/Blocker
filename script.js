@@ -12,3 +12,7 @@ setInterval(function () {
     playerX += 1
     playerY += 1
 }, 1000 / 25)
+
+document.onkeydown = function(event) {
+    console.log('event', event)
+}
