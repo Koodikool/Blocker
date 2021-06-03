@@ -18,7 +18,7 @@ setInterval(function () {
         ctx.fillStyle = "rgb(135, 30, 30)";
         if (item.type === 'player') {
             ctx.fillStyle = "blue";
-            if (alreadyDrawnPlayers.includes(item.name)) {
+            if (alreadyDrawnPlayers.includes(item.name) || item.name === myName) {
                 continue
             }
             alreadyDrawnPlayers.push(item.name)
