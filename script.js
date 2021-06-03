@@ -22,6 +22,7 @@ setInterval(function () {
                 continue
             }
             alreadyDrawnPlayers.push(item.name)
+            ctx.fillText(item.name, item.x, item.y);
         }
         ctx.fillRect(item.x, item.y, 20, 20);
     }
