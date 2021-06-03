@@ -8,6 +8,7 @@ var playerY = 0
 var playerSpeed = 3
 var blocks = []
 var serverData = []
+var myName = "Krister"
 
 setInterval(function () {
     ctx.clearRect(0, 0, canvas.width, canvas.height)
@@ -52,4 +53,5 @@ document.onkeydown = function(event) {
 
 setInterval(async function(){
     serverData = await fetchGET('https://app.koodikool.ee/sdb/blockers')
+    fetchPOST('https://app.koodikool.ee/sdb/blockers', {type: 'player', x: playerX, y: playerY, name: myName})
 }, 2000)
