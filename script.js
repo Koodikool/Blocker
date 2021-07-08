@@ -1,6 +1,6 @@
 var canvas = document.querySelector('canvas')
 var ctx = canvas.getContext('2d')
-canvas.width = document.body.offsetWidth
+canvas.width = document.body.offsetWidth || 700
 canvas.height = 500
 
 var playerX = 0
